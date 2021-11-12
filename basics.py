@@ -134,10 +134,20 @@ import numpy as np
 # print(right)
 
 # reduce, accumulate
-x = np.arange(1, 15)
-print(np.add.reduce(x)) # sum of all numbers in array x
-print(np.add.accumulate(x)) # shows every intermediate result
+# x = np.arange(1, 15)
+# print(np.add.reduce(x)) # sum of all numbers in array x
+# print(np.add.accumulate(x)) # shows every intermediate result
 
 # computing the output of all pairs of 2 different inputs - outer()
-print(np.multiply.outer(x, x))
+# print(np.multiply.outer(x, x))
 
+# aggregations
+
+# print(np.sum(np.random.random(100)))
+# x = np.random.random(100000)
+# print(np.min(x), np.max(x))
+
+# multi dimensional
+some_array = np.random.random((123, 15))
+# print(some_array.min(axis=0)) # min value in each of 15 columns, axis specifies dimension that will be collapsed
+print(some_array.std(axis=0))
