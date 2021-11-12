@@ -148,6 +148,29 @@ import numpy as np
 # print(np.min(x), np.max(x))
 
 # multi dimensional
-some_array = np.random.random((123, 15))
+# some_array = np.random.random((123, 15))
 # print(some_array.min(axis=0)) # min value in each of 15 columns, axis specifies dimension that will be collapsed
-print(some_array.std(axis=0))
+# print(some_array.std(axis=0))
+
+
+# broadcasting
+# a = np.array([0, 1, 2])
+# b = np.ones((3, 3))
+# print(a + b)
+# aa = a.reshape(3,1)
+# print(aa)
+# print(aa + a)
+
+###### important broadcasting rules
+# 1. if 2 arrays differ in their number of dimensions, shape of the one
+#     with fewer dimensions is padded with ones on left side
+# 2. If the shape of the two arrays does not match in any dimension, the array
+#     with shape equal to 1 in that dimension is stretched to match the other shape.
+# 3. If in any dimension the sizes disagree and neither is equal to 1, an error is
+# raised.
+
+
+# Masking
+# x = np.random.randint(0, 10, (3, 3))
+# print(x)
+# print(x[x<5]) # print every element  matching less than 5
